@@ -12,10 +12,10 @@ readonly NC='\033[0m'
 readonly DOCKER_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 readonly SCRIPT_DIR="$(cd "${DOCKER_DIR}/.." && pwd)"
 readonly ROOT_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
-readonly IMAGE_NAME="ubuntu:22041311"
+readonly IMAGE_NAME="tens:cuda-13.1.1-cudnn-devel-ubuntu22.04"
 readonly CONTAINER_NAME="urays_dev"
 readonly IMAGE_DIR="${ROOT_DIR}/.docker"
-readonly IMAGE_FILE="${IMAGE_DIR}/${IMAGE_NAME//:/-}.${CONTAINER_NAME}.backup.tar"
+readonly IMAGE_FILE="${IMAGE_DIR}/${IMAGE_NAME//:/-}.${CONTAINER_NAME}.tar"
 readonly WORKSPACE_PATH="${ROOT_DIR}"
 
 # User configuration - must match Dockerfile ARG defaults

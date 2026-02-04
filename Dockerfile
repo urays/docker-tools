@@ -323,6 +323,6 @@ RUN chown ${USER_UID}:${USER_GID} /home/${USERNAME}/.bashrc
 
 # Set default user (optional, can be overridden by docker run --user)
 USER ${USERNAME}
-
 WORKDIR /home/${USERNAME}
-ENTRYPOINT [ "/bin/bash" ]
+
+ENTRYPOINT [ "/bin/bash", "-l"]
